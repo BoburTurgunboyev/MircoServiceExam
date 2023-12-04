@@ -10,6 +10,7 @@ namespace Library.Domain.Entities
     public class User_Book
     {
         public int Id { get; set; }
+
         [ForeignKey(nameof(Book))]
         public int BookId {  get; set; }
         public Book Book { get; set; }
