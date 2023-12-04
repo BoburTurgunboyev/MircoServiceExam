@@ -1,4 +1,5 @@
 ﻿
+using Library.Aplication.UseCases.BookCase.Queries;
 using Library.Aplication.UseCases.UserCases.Commands;
 using Library.Aplication.UseCases.UserCases.Dtos;
 using MediatR;
@@ -32,6 +33,14 @@ namespace Library.Api.Controllers.UserControllers
             };
             await _mediator.Send(res);
             return Ok(bookDto);
+        }
+
+        [HttpGet]
+
+        public async ValueTask<IActionResult> GetAllBooks()
+        {
+            var result = await _mediator.Send(new GetAllBookQuery());
+            return Ok(result);
         }
     }
 }
