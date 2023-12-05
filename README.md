@@ -4,4 +4,6 @@ MicroService,
 Fluent api,
 Redis,
 JwtTooken,
-Docker-Compose
+Docker-Compose,
+Sql Server,
+Entity Framework
