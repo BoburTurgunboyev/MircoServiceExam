@@ -1,4 +1,5 @@
 ﻿using Library.Domain.Enums;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace Library.Aplication.UseCases.UserCases.Dtos
         public int UserAge { get; set; }
         public string UserAdress { get; set; }
         public string Email { get; set; }
-        public string? ImageUrl { get; set; }
+        public IFormFile ImageUrl { get; set; }
         public string UserPhone { get; set; }
         public Role UserRole { get; set; }
     }
