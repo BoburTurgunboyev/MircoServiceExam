@@ -31,6 +31,7 @@ namespace Library.Aplication.UseCases.UserCase.Handlers
             result.UserPhone = request.UserPhone;   
             result.UserRole = request.UserRole; 
             result.UserAge = request.UserAge;
+            result.ImageUrl = request.ImageUrl;
 
             _appDbContext.Users.Update(result);
             var res = await _appDbContext.SaveChangesAsync(cancellationToken);
