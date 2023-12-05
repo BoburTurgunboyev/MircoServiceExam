@@ -13,7 +13,7 @@ namespace Library.Aplication.UseCases.UserCases.Handler
     public class CreateUserCommandHendler : IRequestHandler<CreateUserCommand, bool>
     {
         private readonly IAppDbContext _appDbContext;
-
+        
         public CreateUserCommandHendler(IAppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
@@ -32,6 +32,7 @@ namespace Library.Aplication.UseCases.UserCases.Handler
                 UserName = request.UserName,
                 UserPhone = request.UserPhone,
                 UserRole = request.UserRole,
+                ImageUrl = request.ImageUrl,
 
             };
 
