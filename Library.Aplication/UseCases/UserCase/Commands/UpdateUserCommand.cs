@@ -17,6 +17,7 @@ namespace Library.Aplication.UseCases.UserCase.Commands
         public int UserAge { get; set; }
         public string UserAdress { get; set; }
         public string Email { get; set; }
+        public string? ImageUrl { get; set; }
         public string UserPhone { get; set; }
         public Role UserRole { get; set; }
     }
