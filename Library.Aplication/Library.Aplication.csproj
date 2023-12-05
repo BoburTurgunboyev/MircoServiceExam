@@ -20,8 +20,4 @@
     <ProjectReference Include="..\src\Library\Library.Domain\Library.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UseCases\User_BookCase\Queries\" />
-  </ItemGroup>
-
 </Project>
