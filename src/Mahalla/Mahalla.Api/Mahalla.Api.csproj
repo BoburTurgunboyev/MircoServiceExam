@@ -19,10 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Mahalla.Application\Mahalla.Application.csproj" />
     <ProjectReference Include="..\Mahalla.Infrastructure\Mahalla.Infrastructure.csproj" />
   </ItemGroup>
