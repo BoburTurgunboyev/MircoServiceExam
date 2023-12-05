@@ -1,4 +1,5 @@
 ﻿using Library.Aplication.Absreactions;
+using Library.Aplication.Interface.File;
 using Library.Aplication.UseCases.UserCases.Commands;
 using Library.Domain.Entities;
 using MediatR;
@@ -13,10 +14,12 @@ namespace Library.Aplication.UseCases.UserCases.Handler
     public class CreateUserCommandHendler : IRequestHandler<CreateUserCommand, bool>
     {
         private readonly IAppDbContext _appDbContext;
-        
-        public CreateUserCommandHendler(IAppDbContext appDbContext)
+        private readonly IFileService _fileService;
+
+        public CreateUserCommandHendler(IAppDbContext appDbContext, IFileService fileService)
         {
             _appDbContext = appDbContext;
+            _fileService = fileService;
         }
 
         public async Task<bool> Handle(CreateUserCommand request, CancellationToken cancellationToken)
@@ -32,7 +35,7 @@ namespace Library.Aplication.UseCases.UserCases.Handler
                 UserName = request.UserName,
                 UserPhone = request.UserPhone,
                 UserRole = request.UserRole,
-                ImageUrl = request.ImageUrl,
+                ImageUrl = await _fileService.UploadImageAsync(request.ImageUrl),
 
             };
 
