@@ -21,9 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\BookCategoryCase\Queries\" />
-    <Folder Include="UseCases\Librarycase\Queries\" />
-    <Folder Include="UseCases\UserCase\Queries\" />
     <Folder Include="UseCases\User_BookCase\Queries\" />
   </ItemGroup>
 
