@@ -1,7 +1,9 @@
 ﻿
+using Library.Aplication.UseCases.BookCase.Commands;
 using Library.Aplication.UseCases.BookCase.Queries;
 using Library.Aplication.UseCases.UserCases.Commands;
 using Library.Aplication.UseCases.UserCases.Dtos;
+using Library.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -41,6 +43,40 @@ namespace Library.Api.Controllers.UserControllers
         {
             var result = await _mediator.Send(new GetAllBookQuery());
             return Ok(result);
+        }
+
+        [HttpGet]
+
+        public async ValueTask<IActionResult> GetByIdBook(int id)
+        {
+            var result=await _mediator.Send(new GetByIdBookQuery() { Id = id });
+            return Ok(result);
+        }
+
+
+        [HttpPut]
+
+        public async ValueTask<IActionResult> UpdateBook(int id, BookDto bookDto)
+        {
+            var result = new UpdateBookCommand()
+            {
+                Id = id,
+                Title = bookDto.Title,
+                PublishPlace = bookDto.PublishPlace,
+                DatePublished = bookDto.DatePublished,
+                BookCategoryId = bookDto.BookCategoryId,
+            };
+
+            var res =await _mediator.Send(result);
+            return Ok("updated");
+        }
+
+        [HttpDelete]
+
+        public async ValueTask<IActionResult> DeleteBook(int id)
+        {
+            var result = await _mediator.Send(new DeleteBookCommand { Id = id });
+            return Ok("deleted");
         }
     }
 }
