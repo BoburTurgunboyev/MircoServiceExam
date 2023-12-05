@@ -36,6 +36,7 @@ namespace Library.Api.Controllers.UserControllers
                 UserPhone = userDto.UserPhone,
                 Email = userDto.Email,
                 UserRole = userDto.UserRole,
+                ImageUrl = userDto.ImageUrl,    
 
             };
 
@@ -74,6 +75,7 @@ namespace Library.Api.Controllers.UserControllers
                 UserAdress= userDto.UserAdress,
                 UserPhone= userDto.UserPhone,
                 UserRole= userDto.UserRole,
+                ImageUrl = userDto.ImageUrl,    
 
             };
             await _mediator.Send(res);
