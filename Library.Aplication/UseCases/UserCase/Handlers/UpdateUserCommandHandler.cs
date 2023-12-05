@@ -1,4 +1,5 @@
 ﻿using Library.Aplication.Absreactions;
+using Library.Aplication.Interface.File;
 using Library.Aplication.UseCases.UserCase.Commands;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -13,10 +14,11 @@ namespace Library.Aplication.UseCases.UserCase.Handlers
     public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, bool>
     {
         private readonly IAppDbContext _appDbContext;
-
-        public UpdateUserCommandHandler(IAppDbContext appDbContext)
+        private readonly IFileService _fileService;
+        public UpdateUserCommandHandler(IAppDbContext appDbContext, IFileService fileService)
         {
             _appDbContext = appDbContext;
+            _fileService = fileService;
         }
 
         public async Task<bool> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
@@ -31,7 +33,7 @@ namespace Library.Aplication.UseCases.UserCase.Handlers
             result.UserPhone = request.UserPhone;   
             result.UserRole = request.UserRole; 
             result.UserAge = request.UserAge;
-            result.ImageUrl = request.ImageUrl;
+            result.ImageUrl = await _fileService.UploadImageAsync(request.ImageUrl);
 
             _appDbContext.Users.Update(result);
             var res = await _appDbContext.SaveChangesAsync(cancellationToken);
