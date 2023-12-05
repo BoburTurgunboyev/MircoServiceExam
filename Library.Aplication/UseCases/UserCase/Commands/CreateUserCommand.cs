@@ -10,5 +10,6 @@ namespace Library.Aplication.UseCases.UserCases.Commands
 {
     public class CreateUserCommand:UserDto,IRequest<bool>
     {
+
     }
 }
