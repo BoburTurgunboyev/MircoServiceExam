@@ -1,4 +1,5 @@
-﻿using Library.Aplication.UseCases.UserCase.Commands;
+﻿using Library.Aplication.Interface.File;
+using Library.Aplication.UseCases.UserCase.Commands;
 using Library.Aplication.UseCases.UserCase.Queries;
 using Library.Aplication.UseCases.UserCases.Commands;
 using Library.Aplication.UseCases.UserCases.Dtos;
@@ -16,15 +17,17 @@ namespace Library.Api.Controllers.UserControllers
     public class UserController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IFileService _fileService;
 
-        public UserController(IMediator mediator)
+        public UserController(IMediator mediator, IFileService fileService = null)
         {
             _mediator = mediator;
+            _fileService = fileService;
         }
 
         [HttpPost]
 
-        public async ValueTask<IActionResult> CreateUser(UserDto userDto)
+        public async ValueTask<IActionResult> CreateUser([FromForm]UserDto userDto)
         {
             var user = new CreateUserCommand()
             {
@@ -36,7 +39,7 @@ namespace Library.Api.Controllers.UserControllers
                 UserPhone = userDto.UserPhone,
                 Email = userDto.Email,
                 UserRole = userDto.UserRole,
-                ImageUrl = userDto.ImageUrl,    
+                ImageUrl = userDto.ImageUrl,
 
             };
 
@@ -62,7 +65,7 @@ namespace Library.Api.Controllers.UserControllers
         }
 
         [HttpPut]
-        public async ValueTask<IActionResult> UpdateUser(int id ,UserDto userDto) 
+        public async ValueTask<IActionResult> UpdateUser(int id ,[FromForm]UserDto userDto) 
         {
             var res = new UpdateUserCommand()
             {
@@ -72,10 +75,10 @@ namespace Library.Api.Controllers.UserControllers
                 UserName = userDto.UserName,
                 UserAge = userDto.UserAge,
                 Email = userDto.Email,
-                UserAdress= userDto.UserAdress,
-                UserPhone= userDto.UserPhone,
-                UserRole= userDto.UserRole,
-                ImageUrl = userDto.ImageUrl,    
+                UserAdress = userDto.UserAdress,
+                UserPhone = userDto.UserPhone,
+                UserRole = userDto.UserRole,
+                ImageUrl = userDto.ImageUrl,
 
             };
             await _mediator.Send(res);
