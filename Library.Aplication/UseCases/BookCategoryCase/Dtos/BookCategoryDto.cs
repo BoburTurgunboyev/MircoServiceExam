@@ -8,6 +8,7 @@ namespace Library.Aplication.UseCases.BookCategoryCase.Dtos
 {
     public class BookCategoryDto
     {
+
         public string CategoryName { get; set; }
         public string Block { get; set; }
         public int? LibraryId { get; set; }
