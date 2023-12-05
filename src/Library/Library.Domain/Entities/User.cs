@@ -12,6 +12,7 @@ namespace Library.Domain.Entities
         public string UserAdress { get; set; }
         public string Email { get; set; }
         public string UserPhone { get; set; }
+        public string? ImageUrl { get; set; }
         public Role UserRole { get; set; }
 
         public ICollection<User_Book> User_Books { get; set; }
