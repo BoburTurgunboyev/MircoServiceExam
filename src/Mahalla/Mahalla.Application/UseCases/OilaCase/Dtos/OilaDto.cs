@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Mahalla.Application.UseCases.OilaCase.Dtos
 {
-    internal class OilaDto
+    public class OilaDto
     {
+        public int Id { get; set; }
+        public int member { get; set; }
+        public int MahallaKamitetId { get; set; }
     }
 }
