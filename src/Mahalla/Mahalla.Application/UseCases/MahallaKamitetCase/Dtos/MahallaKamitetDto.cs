@@ -8,5 +8,10 @@ namespace Mahalla.Application.UseCases.MahallaKamitetCase.Dtos
 {
     public class MahallaKamitetDto
     {
+        public string MahallaName { get; set; }
+        public string CityName { get; set; }
+        public string RegionName { get; set; }
+
+        public int RaisId { get; set; }
     }
 }
