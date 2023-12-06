@@ -15,8 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Library.Aplication\Library.Aplication.csproj" />
-    <ProjectReference Include="..\..\..\Library.Infrastructure\Library.Infrastructure.csproj" />
     <ProjectReference Include="..\Mahalla.Application\Mahalla.Application.csproj" />
   </ItemGroup>
 
