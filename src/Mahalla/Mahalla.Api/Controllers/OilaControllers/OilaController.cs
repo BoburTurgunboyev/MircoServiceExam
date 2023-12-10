@@ -43,13 +43,14 @@ namespace Mahalla.Api.Controllers.OilaControllers
             var result = await _mediator.Send(new GetAllOilaQuery());
             return Ok(result);
         }
-        [HttpGet]
 
+        [HttpGet]
         public async ValueTask<IActionResult> GetByIdOila(int id)
         {
             var result = await _mediator.Send(new GetByIdOdamQuery() { Id = id });
             return Ok(result);
         }
+
         [HttpPut]
         public async ValueTask<IActionResult> UpdateOila(int id, OilaDto oilaDto)
         {
