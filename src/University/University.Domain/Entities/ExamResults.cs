@@ -13,7 +13,8 @@ namespace University.Domain.Entities
         public Term Terms { get; set; }
         public int ExemMark {  get; set; }
         public int Year {  get; set; }
-        public int StudentSubjectId { get; set; }
-        public StudentSubjects StudentSubject { get; set; }
+        public int StudentId{ get; set; }
+        public Students Students { get; set; }
+        
     }
 }
