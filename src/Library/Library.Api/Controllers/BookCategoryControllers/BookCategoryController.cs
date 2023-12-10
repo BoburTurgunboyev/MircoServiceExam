@@ -36,7 +36,7 @@ namespace Library.Api.Controllers.BookCategoryControllers
             };
 
             await _mediator.Send(bookcategory);
-            return Ok(bookcategory);
+            return Ok(bookCategoryDto);
         }
         [HttpGet]
 
