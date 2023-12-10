@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+
+  sqldata:
+    image:  mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=irakl#2022
+      - ACCEPT_EULA=Y
+    ports:
+      - 8080:80
+
+
+  educentr.api:
+    image: ${DOCKER_REGISTRY-}educentrapi
+    build:
+      context: .
+      dockerfile: src/EduCentr/EduCentr.Api/Dockerfile
+
+  library.api:
+    image: ${DOCKER_REGISTRY-}libraryapi
+    build:
+      context: .
+      dockerfile: src/Library/Library.Api/Dockerfile
+
+
+  mahalla.api:
+    image: ${DOCKER_REGISTRY-}mahallaapi
+    build:
+      context: .
+      dockerfile: src/Mahalla/Mahalla.Api/Dockerfile
+
+
+  university.api:
+    image: ${DOCKER_REGISTRY-}universityapi
+    build:
+      context: .
+      dockerfile: src/University/University.Api/Dockerfile
+
