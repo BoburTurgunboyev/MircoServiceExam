@@ -27,9 +27,9 @@ namespace Library.Aplication.UseCases.Librarycase.Handlers
             {
                 return false;
             }
-            res.Id = request.Id;
+           
             res.LibraryNumber = request.LibraryNumber;
-            res.LibraryName = request.LibraryName;
+            res.LibraryName = request.LibraryName; 
             res.Location = request.Location;
 
              _appDbContext.Libraries.Update(res);

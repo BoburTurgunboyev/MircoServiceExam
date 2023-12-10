@@ -13,6 +13,6 @@ namespace Library.Aplication.Absreactions
         public DbSet<BookCategory> BookCategories { get; set; }
 
 
-        public Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+        public ValueTask<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }
