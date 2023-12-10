@@ -28,7 +28,7 @@ namespace Mahalla.Api.Controllers.MahallaKamitetControllers
                 MahallaName = mahallaKamitetDto.MahallaName,
                 RegionName = mahallaKamitetDto.RegionName,
                 CityName = mahallaKamitetDto.CityName,
-                RaisId =mahallaKamitetDto.RaisId
+                
             };
             var res= await _mediator.Send(mahalla);
             return Ok("Cretaed");
@@ -56,7 +56,7 @@ namespace Mahalla.Api.Controllers.MahallaKamitetControllers
                 MahallaName = mahallaKamitetDto.MahallaName,
                 CityName = mahallaKamitetDto.CityName,
                 RegionName = mahallaKamitetDto.RegionName,
-                RaisId = mahallaKamitetDto.RaisId
+                
             };
 
             var res = await _mediator.Send(mahalla);
