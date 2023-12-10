@@ -12,7 +12,10 @@ namespace Mahalla.Infrastructure.Data
     public class AppBbContect : DbContext, IAppDbConect
     {
 
-        public AppBbContect(DbContextOptions<AppBbContect> options):base (options) { }   
+        public AppBbContect(DbContextOptions<AppBbContect> options):base (options)
+        {
+            Database.Migrate();
+        }   
 
         public DbSet<MahallaKamitet> MahallaKamitets { get; set; }
         public DbSet<Rais> Raiss {  get; set; }
