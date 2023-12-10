@@ -8,7 +8,8 @@ using University.Domain.Entities;
 
 namespace University.Application.UseCases.OverAllMarksCase.Queries
 {
-    public class GetAllOverAllMarksQuery : IRequest<List<OverAllMarks>>
+    public class GetByIdOverAllMarksQuery:IRequest<OverAllMarks>
     {
+        public int Id {  get; set; }
     }
 }
