@@ -11,6 +11,6 @@ namespace University.Domain.Entities
         public int Id { get; set; }
         public string SubjectName { get; set; }
 
-        public ICollection<StudentSubjects> StudentSubjects { get; set; }
+        public ICollection<Students> StudentSubject { get; set; }
     }
 }
