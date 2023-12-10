@@ -9,7 +9,7 @@ namespace University.Application.UseCases.OverAllMarksCase.Dtos
 {
     public class OverAllMarksDto
     {
-        public int Id { get; set; }
+    
         public MarkType MarkType { get; set; }
 
         public int StudentsId { get; set; }
