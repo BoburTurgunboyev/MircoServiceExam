@@ -1,9 +1,10 @@
 # MicroServiice 
+4 ta project,
 Clean architecture,
 MicroService,
 Fluent api,
-Redis,
-JwtTooken,
 Docker-Compose,
 Sql Server,
-Entity Framework
+Entity Framework,
+CQRS hamma  proyectda bor
+
