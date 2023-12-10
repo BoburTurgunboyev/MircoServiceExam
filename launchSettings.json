@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "educentr.api": "StartDebugging",
+        "library.api": "StartDebugging",
+        "mahalla.api": "StartDebugging",
+        "university.api": "StartDebugging"
+      }
+    }
+  }
+}
