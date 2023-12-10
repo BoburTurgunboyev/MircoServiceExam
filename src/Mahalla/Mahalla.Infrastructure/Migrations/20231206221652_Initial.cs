@@ -18,8 +18,7 @@ namespace Mahalla.Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MahallaName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CityName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RegionName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RaisId = table.Column<int>(type: "int", nullable: false)
+                    RegionName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

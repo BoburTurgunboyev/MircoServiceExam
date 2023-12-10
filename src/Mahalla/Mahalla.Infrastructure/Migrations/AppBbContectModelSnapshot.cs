@@ -37,9 +37,6 @@ namespace Mahalla.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RaisId")
-                        .HasColumnType("int");
-
                     b.Property<string>("RegionName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mahalla.Infrastructure.Migrations
 {
     [DbContext(typeof(AppBbContect))]
-    [Migration("20231206094832_Initial")]
+    [Migration("20231206221652_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -39,9 +39,6 @@ namespace Mahalla.Infrastructure.Migrations
                     b.Property<string>("MahallaName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("RaisId")
-                        .HasColumnType("int");
 
                     b.Property<string>("RegionName")
                         .IsRequired()
