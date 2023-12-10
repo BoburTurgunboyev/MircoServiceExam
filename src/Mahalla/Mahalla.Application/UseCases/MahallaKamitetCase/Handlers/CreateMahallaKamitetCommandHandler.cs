@@ -28,7 +28,7 @@ namespace Mahalla.Application.UseCases.MahallaKamitetCase.Handlers
               RegionName = request.RegionName,
               MahallaName = request.MahallaName,
               CityName = request.CityName,
-              RaisId= request.RaisId
+              
 
             };
 

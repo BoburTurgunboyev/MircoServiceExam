@@ -12,6 +12,6 @@ namespace Mahalla.Application.UseCases.MahallaKamitetCase.Dtos
         public string CityName { get; set; }
         public string RegionName { get; set; }
 
-        public int RaisId { get; set; }
+       
     }
 }

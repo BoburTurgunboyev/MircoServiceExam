@@ -26,11 +26,11 @@ namespace Mahalla.Application.UseCases.MahallaKamitetCase.Handlers
             {
                 return false;
             }
-            result.Id = request.Id;
+           
             result.MahallaName = request.MahallaName;
             result.RegionName = request.RegionName;
             result.CityName = request.CityName;
-            result.RaisId = request.RaisId;
+           
 
             _appDbConect.MahallaKamitets.Update(result);
             var res = await _appDbConect.SaveChangesAsync(cancellationToken);
