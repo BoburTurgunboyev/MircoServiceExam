@@ -12,8 +12,6 @@ namespace Mahalla.Domain.Entities
         public string MahallaName { get; set; }
         public string CityName { get; set; }
         public string RegionName { get; set; }
-
-        public int RaisId { get; set; }
         public Rais Rais { get; set; }
 
         public ICollection<Oila> Oilas { get; set; }
