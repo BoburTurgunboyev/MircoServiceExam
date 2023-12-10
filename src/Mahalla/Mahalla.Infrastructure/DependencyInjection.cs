@@ -18,7 +18,7 @@ namespace Mahalla.Infrastructure
         {
             services.AddDbContext<IAppDbConect, AppBbContect>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnections"));
             });
 
             return services;
