@@ -7,7 +7,8 @@
 
 ## Bu microservice 4 ta loyihadan tashkil topgan.
 
-
+ - [EduCentr](https://github.com/BoburTurgunboyev/MircoServiceExam/tree/master/src/EduCentr)
+ - [Mahalla](https://github.com/BoburTurgunboyev/MircoServiceExam/tree/master/src/Mahalla)
 
 
 
