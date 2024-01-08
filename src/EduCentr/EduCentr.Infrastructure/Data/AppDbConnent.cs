@@ -8,7 +8,7 @@ namespace EduCentr.Infrastructure.Data
     {
         public AppDbConnent(DbContextOptions<AppDbConnent> options) : base(options)
         {
-            Database.Migrate();
+            
         }
 
         public DbSet<EduStudent> eduStudents { get; set; }
