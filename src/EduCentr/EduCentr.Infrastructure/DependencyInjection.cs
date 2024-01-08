@@ -17,7 +17,7 @@ namespace EduCentr.Infrastructure
         {
             services.AddDbContext<IAppDbConnect, AppDbConnent>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnections"));
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
 
             return services;
